@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="https://thymeleaf.org"
+      xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+    <head>
+        <title>Fazer Pedido</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Cadastre seu Pedido</h1>
+        <a th:href="@{/Cardapio}">
+            <button type="button">Ver Cardapio</button></a><br>
+        <form method="post">
+           Sabor: <input type="text" value="" name="sabor"/><br>
+           Tamanho: <input type="text" value="" name="tamanho"/><br>
+           <button type="submit">Cadastrar</button>
+        </form>
+    </body>
+</html>
