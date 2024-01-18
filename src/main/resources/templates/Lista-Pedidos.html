@@ -12,10 +12,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <a th:href="@{/Pedido-Cadastrar}">
             <button type="button">Fazer Pedido</button></a><br>
     <body>
+        <a th:href="@{/Home}">
+            <button type="button">Home</button></a><br>
         <h1> Listando Pedidos <h1> Sabor       Tamanho
                 <div th:each="pedido : ${pedido}"> 
                 <div class ="row">
-                    <span th:text="${pedio.sabor}"></span>
+                    <span th:text="${pedido.sabor}"></span>
                     <span th:text="${pedido.tamanho}"></span>   
                 </div>
                     <a th:href="@{/Pedido-Cadastrar}">

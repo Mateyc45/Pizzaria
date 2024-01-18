@@ -18,11 +18,37 @@ import java.io.Serializable;
 @Entity
 @Table(name = "cardapio")
 public class Cardapio implements Serializable{
-    
+    private static final long serializableVersionUID = 1L;
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private int id;
     private String sabor;
     private String tamanho;
-    private double preco;
+    private String preco;
+    public Integer getId(){
+        return id;
+    }
+    public void setID(Integer id){
+        this.id = id;
+    }
+    
+    public String getSabor(){
+        return sabor;
+    }
+    public void setSabor(String sabor){
+        this.sabor = sabor;
+    }
+    
+    public String getTamanho(){
+        return tamanho;
+    }
+    public void setTamanho(String tamanho){
+        this.tamanho = tamanho;
+    }
+    public String getPreco(){
+        return preco;
+    }
+    public void setPreco(String preco){
+        this.preco = preco;
+    }
 }

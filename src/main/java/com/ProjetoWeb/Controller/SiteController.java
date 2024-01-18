@@ -6,6 +6,7 @@ package com.ProjetoWeb.Controller;
 
 
 import com.ProjetoWeb.Cookie.model.Preferencias;
+import com.ProjetoWeb.Models.Cardapio;
 import com.ProjetoWeb.Models.Pedido;
 import com.ProjetoWeb.Repository.CardapioRepository;
 import com.ProjetoWeb.Repository.PedidoRepository;
@@ -44,16 +45,23 @@ public class SiteController {
         return "Pedido"; 
     }
     @RequestMapping(value="/Pedido-Cadastrar", method=RequestMethod.POST) 
-        public String PedidoCadastrar(Pedido pedido){
-        pr.save(pedido);
+        public String PedidoCadastrar(Pedido Pedido){
+        pr.save(Pedido);
         return "redirect:/Pedido-Cadastrar"; 
         }
     @RequestMapping("/Cardapio") 
-        public String Cardapio(){
-        return "Cardapio"; 
+        public ModelAndView Cardapio(){
+        ModelAndView mv = new ModelAndView("Cardapio");
+        Iterable<Cardapio> cardapio = cr.findAll();
+        mv.addObject("cardapio", cardapio);
+        return mv; 
         }
     @RequestMapping("/Pedido-Listar") 
-        public String PedidoListar(){
-        return "Lista-Pedidos"; 
+        public ModelAndView PedidoListar(){
+        ModelAndView lv = new ModelAndView("Lista-Pedidos");
+        Iterable<Pedido> pedido = pr.findAll();
+        lv.addObject("pedido", pedido);
+        return lv; 
     }
 }
+

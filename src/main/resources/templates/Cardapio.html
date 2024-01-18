@@ -10,6 +10,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <a th:href="@{/Home}">
+            <button type="button">Home</button></a><br>
         <a th:href="@{/Pedido-Cadastrar}">
             <button type="button">Fazer Pedido</button></a><br>
         <h1> Cardapio <h1> Sabor  Tamanho Preco
@@ -17,8 +19,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <div class ="row">
                     <span th:text="${cardapio.sabor}"></span>
                     <span th:text="${cardapio.tamanho}"></span>
-                    <span th:text="${cardapio.preco}"></span>
-                    
+                    <span th:text="${cardapio.preco}"></span> 
                 </div>
                 
     </body>
