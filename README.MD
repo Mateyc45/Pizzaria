@@ -1,4 +1,4 @@
-Pizzaria Site(HTML, CSS, JAVA, SQL) Status= Em desenvolvimento
+Pizzaria Site(HTML, CSS, JAVA, SQL) Status= Concluido
 
 Serão utilizadas linguagens html para criação das views integrado com o css para desenvolver uma estilização mais agradavel aos olhos. Alem disso será utilizado, no backend, Java para fazer gets e posts ao mySQL, alem disso terão funções que acontecerão em clases do projeto. Alem disto serão utilizados cookies(modo claro e escuro)
 
